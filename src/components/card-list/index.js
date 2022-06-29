@@ -1,10 +1,22 @@
 import Card from "../card"
 import './index.css'
 
-function CardList() {
+function CardList(props) {
+
     return (
         <div className="card-list">
-            <Card/>
+
+            
+            {
+                props.list.map((user,index) =>{
+                    return(
+                        <Card user = {user}/>
+
+                    )
+                }
+
+                )
+            }
         </div>
 
     )
