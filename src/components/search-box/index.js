@@ -1,9 +1,12 @@
 import './index.css'
 
-function SearchBox() {
+function SearchBox(props) {
+    // const filteredUser = this.state.users.filter(user => user.name=="Ervin Howell")
     return (
         <div>
-            <input type="text" className="search-box" placeholder='Search Monster'/>
+            {/* Step 3 Here calling it as property onChange */}
+            <input onChange={props.change} type="text" className="search-box" placeholder='Search Monster'/>
+             
         </div>
     )
 }
